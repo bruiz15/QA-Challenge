@@ -1,0 +1,22 @@
+{
+  "name": "CYPRESSCHALLENGE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "cypress": "^6.9.1",
+    "cypress-mochawesome-reporter": "^2.2.1"
+  },
+  "scripts": {
+    "project": "cypress run --browser chrome",
+    "notes": "cypress run --spec cypress/integration/examples/CreateNewNoteTests.spec.js --browser chrome",
+    "login": "cypress run --spec cypress/integration/examples/LoginTest.spec.js --browser chrome",
+    "report": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

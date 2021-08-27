@@ -1,0 +1,16 @@
+{
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 30000,
+  "env": {
+    "url": "http://testapp.galenframework.com/"
+  },
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "Wizeline QA Onboarding Challenge",
+    "embeddedScreenshots": true,
+    "inlineAssets": true
+  },
+  "projectId": "znpryd"
+}
