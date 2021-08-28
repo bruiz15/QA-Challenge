@@ -11,7 +11,7 @@
     "cypress-mochawesome-reporter": "^2.2.1"
   },
   "scripts": {
-    "project": "cypress run --browser chrome",
+    "project": "cypress run --record --browser chrome",
     "notes": "cypress run --spec cypress/integration/examples/CreateNewNoteTests.spec.js --browser chrome",
     "login": "cypress run --spec cypress/integration/examples/LoginTest.spec.js --browser chrome",
     "report": ""
