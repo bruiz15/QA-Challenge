@@ -4,7 +4,7 @@ import WelcomePage from '../../support/pageObjects/WelcomePage'
 import {CREDENTIALS, MESSAGES} from '../../fixtures/data'
 
 
-describe ('Sample Test Page', function(){
+describe ('Login npmPage', function(){
 
      beforeEach(function(){
             LoginPage.visit()
