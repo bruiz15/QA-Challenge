@@ -19,29 +19,24 @@ jobs:
           
   ui-chrome-tests:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome92-ff91
-    needs: cypress-run
- 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+        - name: Checkout
+          uses: actions/checkout@v2
 
-      - name: 'UI Tests - Chrome'
-        uses: cypress-io/github-action@v2
-        with:
-          # we have already installed all dependencies above
-          build: npm run project
-          start: npm start
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 120
-          browser: chrome
-          record: true
-          parallel: true
-          group: 'UI - Chrome'
-          spec: cypress/integration/examples/*.spec.js
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
- 
+        - name: Cypress run
+          uses: cypress-io/github-action@v2
+          with:
+            start: npm start
+            build: npm run project
+            wait-on: "http://localhost:3000"
+            record: true
+            parallel: true
+            browser: chrome
+            headless: true
+
+          env:
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+    
     
           
         
