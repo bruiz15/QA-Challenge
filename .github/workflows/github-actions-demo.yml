@@ -28,7 +28,6 @@ jobs:
           with:
             start: npm start
             build: npm run project
-            wait-on: "http://localhost:3000"
             record: true
             parallel: true
             browser: chrome
